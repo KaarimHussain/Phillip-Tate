@@ -1,3 +1,5 @@
+import Marquee from "react-fast-marquee";
+
 export default function TopNavbar() {
     const items = [
         "( BUSBYHOUSE )",
@@ -7,17 +9,19 @@ export default function TopNavbar() {
     ];
 
     return (
-        <nav className="bg-primary py-3 px-10 overflow-hidden border-b border-border/50">
-            <div className="flex items-center justify-center gap-12 whitespace-nowrap animate-in fade-in duration-700">
-                {items.map((item, index) => (
-                    <span 
-                        key={index} 
-                        className="text-[10px] font-bold text-primary-foreground/60 uppercase tracking-[0.2em] font-sans"
-                    >
-                        {item}
-                    </span>
-                ))}
-            </div>
+        <nav className="bg-primary py-2 overflow-hidden border-b border-white/5">
+            <Marquee gradient={false} speed={40}>
+                <div className="flex items-center gap-20 pr-20">
+                    {items.map((item, index) => (
+                        <span 
+                            key={index} 
+                            className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em] font-sans"
+                        >
+                            {item}
+                        </span>
+                    ))}
+                </div>
+            </Marquee>
         </nav>
     );
 }
