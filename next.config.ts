@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "blog-cdn.reedsy.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };
